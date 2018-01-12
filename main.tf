@@ -1,8 +1,9 @@
+# Configure the AWS Provider
 provider "aws" {
-  region = "${var.region}"
-  secret_key = "${var.secret_access_key}"
-  access_key = "${var.access_key_id}"
+  shared_credentials_file = "~/.aws/credentials"
+  region                  = "${var.region}"
 }
+
 
 module "config" {
   source="./modules/config"
