@@ -4,6 +4,8 @@ variable "access_key_secret" {}
 variable "region" {}
 variable "user_data" {}
 
+# replace the AMI list with a filter.
+
 variable "amis" {
   default = {
     us-east-1 = "ami-fcfd6194"
